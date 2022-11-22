@@ -1,11 +1,13 @@
 <template>
     <div class="post">
         <div>
+            <div><strong>ID:</strong> {{post.id}}</div>
             <div><strong>Title:</strong> {{post.title}}</div>
             <div><strong>Description:</strong> {{post.body}}</div>
         </div>
         <div class="post__btns">
-            <MyButton @click="$emit('remove', post)">Удалить</MyButton>
+            <MyButton @click="$router.push('/posts/' + post.id)">More</MyButton>
+            <MyButton @click="$emit('remove', post)">Remove</MyButton>
         </div>
     </div>
 </template>

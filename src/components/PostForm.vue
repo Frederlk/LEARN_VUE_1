@@ -2,6 +2,7 @@
     <form @submit="prevent" class="form">
         <h4>Post Creator</h4>
         <MyInput 
+            v-focus
             v-model="post.title"
             placeholder="title" 
             name="title" />
@@ -38,8 +39,8 @@
                     body: ""
                 };
             }
-    },
-}
+        },
+    }
 </script>
 
 <style scoped>
